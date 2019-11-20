@@ -27,6 +27,7 @@ export default {
   data () {
     return {
       items: '',
+      test: 'test-state'
     }
   },
   // API通信
