@@ -1,12 +1,21 @@
 <template>
   <div class="items">
     <div v-for="item in items" :key="item" class="item-box">
-      <div class="name">
+      <div class="name" v-if="item.title == 'aaa'">
         {{ item.title }}
+      </div>
+      <div class="name" v-else-if="item.title == 'test4'">
+        TEST!!!!!!
+      </div>
+      <div class="name" v-else>
+        ELSE
       </div>
       <div class="price">
         {{ item.body }}
       </div>
+    </div>
+    <div>
+      {{ test }}
     </div>
   </div>
 </template>
@@ -17,7 +26,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      items: ''
+      items: '',
     }
   },
   // API通信
